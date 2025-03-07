@@ -43,22 +43,29 @@
         </div>
 
         <div class="card p-4 mt-3">
-            <h4>Nova Partida</h4>
+            <h2>Nova Partida</h2>
             <form id="formPartida">
                 <div class="mb-3">
-                    <label class="form-label">Título</label>
-                    <input type="text" id="titulo" class="form-control" required>
+                    <label class="form-label"><br><strong>Nome</strong></label>
+                    <input type="text" id="nome" class="form-control" placeholder="Insira seu nome completo"required>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Local</label>
-                    <input type="text" id="local" class="form-control" required>
+                    <label for="email"><strong>Email</strong></label>
+                    <input type="email" id="email" class="form-control" placeholder="seuemail@exemplo.com" required>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Data e Hora</label>
+                    <label for="telefone"><strong>Email</strong></label>
+                    <input type="tel" id="telefone" class="form-control" placeholder="(xx) xxxxx-xxxx" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label"><strong>Data e Hora</strong></label>
                     <input type="datetime-local" id="dataHora" class="form-control" required>
                 </div>
                 <button type="submit" class="btn btn-success">Criar Partida</button>
             </form>
+
+            <div id="mensagem" class="message" style="display:none;"></div>
+
         </div>
 
         <div class="card p-4 mt-4">

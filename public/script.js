@@ -1,3 +1,18 @@
+document.getElementById('formPartida').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Gerar um código de confirmação aleatório (6 dígitos)
+    const codigo = Math.floor(100000 + Math.random() * 900000);
+    
+    // Exibir mensagem de confirmação
+    const mensagemDiv = document.getElementById('mensagem');
+    mensagemDiv.style.display = 'block';
+    mensagemDiv.innerHTML = "<br><strong>Reserva Confirmada!</strong><br>Seu código de confirmação é: " + codigo + "<br>Enviamos um código para o seu email.";
+    
+    // Resetar o formulário após envio
+    document.getElementById('formPartida').reset();
+})
+
 document.addEventListener('DOMContentLoaded', function () {
     const formPartida = document.getElementById('formPartida');
     const listaPartidas = document.getElementById('listaPartidas');
